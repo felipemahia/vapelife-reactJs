@@ -161,3 +161,32 @@ function App() {
   );
 }
 export default App; */
+
+import { useEffect, useState } from "react";
+
+const Clicker = () => {
+
+  const [count, setCount] = useState(0);
+
+  const clickHandled = () => {
+    console.log('se hizo click');
+    setCount(count + 1)
+  }
+  //cada vez que 
+  useEffect(() => {
+    console.log('se hizo render');
+  });
+  // Solo en el montaje con
+  useEffect(() => {
+    console.log('Solo en montaje');
+  }, [])
+
+  return (
+    <button onClick={clickHandled}>
+      Hooks example
+      <h1> {count} </h1>
+    </button>
+  );
+};
+
+export default Clicker 

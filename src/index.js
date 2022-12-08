@@ -1,20 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Footer from './components/footer/Footer.jsx';
 import Header from './components/NavBar/NavBar.jsx';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  //<React.StrictMode>
+  <>
     <Header />
-    <ItemDetailContainer />
+    <ItemListContainer />
     {/* <App /> */}
     <Footer />
-  </React.StrictMode>
+  </>
+  //</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
