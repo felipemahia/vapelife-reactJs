@@ -1,20 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Cart from './components/Cart/Cart';
 import reportWebVitals from './reportWebVitals';
 import Footer from './components/footer/Footer.jsx';
 import Header from './components/NavBar/NavBar.jsx';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //<React.StrictMode>
   <>
-    <Header />
-    <ItemListContainer />
-    {/* <App /> */}
-    <Footer />
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/equipos' element={<ItemListContainer />} />
+        <Route path='/liquidos' element={<ItemListContainer />} />
+        <Route path='/detalle' element={<ItemDetailContainer />} />
+        <Route path='/cart' element={<Cart />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   </>
   //</React.StrictMode>
 );

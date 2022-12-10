@@ -1,6 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 import React, { useEffect, useState } from 'react';
+import './ItemListContainer.css'
 
 
 const productos = [
@@ -36,7 +37,7 @@ const productos = [
     },
 ]
 
-export const ItemListContainer = ({ texto }) => {
+export const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -54,9 +55,9 @@ export const ItemListContainer = ({ texto }) => {
         }
 
         return (
-            <>
-                <ItemCount onAdd={onAdd} />
+            <div className="cardListContainer">
+                {/* <ItemCount onAdd={onAdd} /> */}
                 <ItemList data={data} />
-            </>
+            </div>
         );
     }

@@ -1,7 +1,9 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React from "react";
 
-const ShoppingCartIcon  = () => {
-  return <svg data-testid="ShoppingCartIcon"></svg>
-};
+const Cart = () => {
+    return(
+        <div>Cart</div>
+    )
+}
 
-export default ShoppingCartIcon 
+export default Cart; 

@@ -9,16 +9,15 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import ItemCount from '../ItemCount/ItemCount';
-import productos from '../../utils/mock.jsx'
+import './ItemProduct.css'
+import { Box, Button } from "@mui/material";
 
 
 /*  RESOLVER ESTOOOOOOOOOOOOO  */
 
 const ItemProduct = ({ info }) => {
-    /* const {  } = data; */
     return (
-        <>
+        <div className='card'>
             <Card sx={{ maxWidth: 345 }}>
                 <CardHeader
                     avatar={
@@ -46,12 +45,12 @@ const ItemProduct = ({ info }) => {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                        <ItemCount />
-                    </IconButton>
+                    <Box>
+                    <Button size= "small" variant="contained" color="secondary">Ver más</Button>
+                    </Box>
                 </CardActions>
             </Card>
-        </>
+        </div>
     );
 }
 
