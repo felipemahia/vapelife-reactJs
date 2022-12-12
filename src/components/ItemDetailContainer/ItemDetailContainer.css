@@ -1,6 +1,28 @@
-.cardDetailContainer{
+.cardDetailContainer {
     margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.imgCard {
+    height: 500px;
+    width: 400px;
+    margin: 50px;
+}
+
+.productDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 800;
+}
+.stock {
+    color: gray;
+    text-align: right;
 }

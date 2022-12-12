@@ -5,7 +5,7 @@ import Cart from './components/Cart/Cart';
 import reportWebVitals from './reportWebVitals';
 import Footer from './components/footer/Footer.jsx';
 import Header from './components/NavBar/NavBar.jsx';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+//import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -18,9 +18,9 @@ root.render(
       <Header />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
-        <Route path='/equipos' element={<ItemListContainer />} />
-        <Route path='/liquidos' element={<ItemListContainer />} />
-        <Route path='/detalle' element={<ItemDetailContainer />} />
+        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
+        {/* <Route path='/categoria' element={<ItemListContainer />} /> */}
+        {/* <Route path='/detalle' element={<ItemDetailContainer />} /> */}
         <Route path='/cart' element={<Cart />} />
       </Routes>
       <Footer />

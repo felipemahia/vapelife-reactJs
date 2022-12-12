@@ -6,6 +6,7 @@ const producto = {
         id: 1,
         marca: "SMOK",
         modelo: "NORD4",
+        stock: 34,
         precio: 1100,
         categoria: "principiantes",
         img: "../../imagenes/1 Principiantes/Nord Pod/1.jpg",
@@ -13,7 +14,7 @@ const producto = {
         alt: "Equipo de inicio, de marca smok modelo Nord 4"
     }
 
-export const ItemDetailContainer =() => {
+export const ItemDetailContainer = () => {
 
     const [data, setData] = useState({})
     useEffect(() => {
@@ -28,7 +29,6 @@ export const ItemDetailContainer =() => {
     return(
         
         <div className="cardDetailContainer">
-            <h1>ItemDetail</h1>
         <ItemDetail data={data}/>
         </div>
     )

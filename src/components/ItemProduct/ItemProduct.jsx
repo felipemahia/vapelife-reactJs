@@ -13,8 +13,6 @@ import './ItemProduct.css'
 import { Box, Button } from "@mui/material";
 
 
-/*  RESOLVER ESTOOOOOOOOOOOOO  */
-
 const ItemProduct = ({ info }) => {
     return (
         <div className='card'>

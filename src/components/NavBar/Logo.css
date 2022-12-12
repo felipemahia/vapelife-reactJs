@@ -1,0 +1,13 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.logo {
+    justify-content: center;
+    width: fit-content;
+    height: 6rem;
+}

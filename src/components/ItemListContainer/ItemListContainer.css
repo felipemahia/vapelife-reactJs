@@ -1,6 +1,7 @@
 .cardListContainer{
     margin: 20px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }

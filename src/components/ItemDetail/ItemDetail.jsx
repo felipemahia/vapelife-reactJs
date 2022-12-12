@@ -8,23 +8,18 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+//import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ItemCount from '../ItemCount/ItemCount';
 
 export const ItemDetail =({ data }) => {
     return(
             <>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="productDescription" sx={{ maxWidth: 345 }}>
                     <CardHeader
                         avatar={
                             <Avatar sx={{ bgcolor: red[500] }} aria-label="">
                                 E {/* Acá va un logo de un equipo que tengo que hacer */}
                             </Avatar>
-                        }
-                        action={
-                            <IconButton aria-label="settings">
-                                <MoreVertIcon />
-                            </IconButton>
                         }
                         title={data.modelo}
                         subheader={data.marca}
@@ -39,9 +34,12 @@ export const ItemDetail =({ data }) => {
                         <Typography variant="body2" color="text.secondary">
                             {data.description}
                         </Typography>
+                        <div className="price"> ${data.precio}</div>
+                        <div className="stock">Available stock = {data.stock}</div>
+                        
                     </CardContent>
                     <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
+                        <IconButton>
                             <ItemCount />
                         </IconButton>
                     </CardActions>
