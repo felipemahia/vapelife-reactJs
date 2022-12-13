@@ -1,29 +1,25 @@
 import React, {useState, useEffect} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css'
-
-const producto = {
-        id: 1,
-        marca: "SMOK",
-        modelo: "NORD4",
-        stock: 34,
-        precio: 1100,
-        categoria: "principiantes",
-        img: "../../imagenes/1 Principiantes/Nord Pod/1.jpg",
-        description: "Estilo POD, lo más sencillo pero eficiente",
-        alt: "Equipo de inicio, de marca smok modelo Nord 4"
-    }
+import { useParams } from "react-router-dom";
+import productos from "../../utils/mock";
 
 export const ItemDetailContainer = () => {
 
     const [data, setData] = useState({})
+    const { detalleId } = useParams();
+
+    const getProductsDetail = () => new Promise(resolve => {
+        setTimeout(() => resolve(productos), 3000);
+    });
+
     useEffect(() => {
-        const getData = new Promise((resolve) => {
+        const getProductsDetail = new Promise((resolve) => {
             setTimeout(()=>{
-                resolve (producto);
+                resolve (productos);
             })
         })
-        getData.then(res=>setData(res))
+        getProductsDetail.then(res=>setData(res.find(p => p.id === parseInt(detalleId))))
     }, [])
 
     return(

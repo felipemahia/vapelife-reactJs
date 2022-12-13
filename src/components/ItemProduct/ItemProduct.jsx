@@ -11,6 +11,7 @@ import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './ItemProduct.css'
 import { Box, Button } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 
 const ItemProduct = ({ info }) => {
@@ -44,7 +45,9 @@ const ItemProduct = ({ info }) => {
                 </CardContent>
                 <CardActions disableSpacing>
                     <Box>
-                    <Button size= "small" variant="contained" color="secondary">Ver más</Button>
+                    <Button size= "small" variant="contained" color="secondary">
+                        <Link style = {{textDecoration: "none", color: 'white'}} to={`/detalle/${info.id}`} >Ver más</Link>
+                        </Button>
                     </Box>
                 </CardActions>
             </Card>

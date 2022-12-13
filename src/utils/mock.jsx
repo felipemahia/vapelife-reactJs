@@ -6,7 +6,7 @@ const productos = [
         precio: 1100,
         stock: 20,
         categoria: "equipos",
-        img: "./imagenes/1 Principiantes/Nord Pod/1.jpg",
+        img: "../imagenes/1 Principiantes/Nord Pod/1.jpg",
         description: "Estilo POD, lo más sencillo pero eficiente",
         alt: "Equipo de inicio, de marca smok modelo Nord 4"
     },
@@ -17,7 +17,7 @@ const productos = [
         precio: 1500,
         stock: 22,
         categoria: "equipos",
-        img: "./imagenes/1 Principiantes/VapePen 22/1.jpg",
+        img: "../imagenes/1 Principiantes/VapePen 22/1.jpg",
         description: "Simple pero elegante",
         alt: "Equipo de inicio, de marca Smok, modelo VapePen 22"
     },
@@ -28,7 +28,7 @@ const productos = [
         precio: 2000,
         stock: 33,
         categoria: "equipos",
-        img: "./imagenes/1 Principiantes/Smok Stick Prince/1.jpg",
+        img: "../imagenes/1 Principiantes/Smok Stick Prince/1.jpg",
         description: "Kit de inicio... a lo grande",
         alt: "Equipo de inicio, de marca Smok, modelo Prince"
     },
@@ -39,7 +39,7 @@ const productos = [
         precio: 2000,
         stock: 5,
         categoria: "equipos",
-        img: "./imagenes/1 Principiantes/Sky Solo/1.jpg",
+        img: "../imagenes/1 Principiantes/Sky Solo/1.jpg",
         description: "Cabe en el bolsillo pero el límite es el cielo.",
         alt: "Equipo de inicio, de marca Vaporesso, modelo Sky Solo"
     },
@@ -50,7 +50,7 @@ const productos = [
         precio: 1800,
         stock: 16,
         categoria: "equipos",
-        img: "./imagenes/1 Principiantes/Joyctech exceed grip/1.jpg",
+        img: "../imagenes/1 Principiantes/Joyctech exceed grip/1.jpg",
         description: "Simple pero poderoso",
         alt: "Equipo de inicio, de marca Joytech, modelo Exceed Grip"
     },
@@ -61,7 +61,7 @@ const productos = [
         precio: 1100,
         stock: 12,
         categoria: "equipos",
-        img: "./imagenes/1 Principiantes/Vaporesso Pod/1.jpg",
+        img: "../imagenes/1 Principiantes/Vaporesso Pod/1.jpg",
         description: "Estilo POD, el pequeño primer paso",
         alt: "Equipo de inicio, de marca Joytech, modelo Exceed Grip"
     },
@@ -72,7 +72,7 @@ const productos = [
         precio: 2200,
         stock:12,
         categoria: "equipos",
-        img: "./imagenes/2 Avanzados/Kit voopoo drag 3/1.jpg",
+        img: "../imagenes/2 Avanzados/Kit voopoo drag 3/1.jpg",
         description: "Drag en formato kit... Nada puede salir mal",
         alt: "Equipo avanzado, de marca Voopoo, modelo Drag X"
     },
@@ -83,7 +83,7 @@ const productos = [
         precio: 2500,
         stock: 12,
         categoria: "equipos",
-        img: "./imagenes/2 Avanzados/Kit Aegis Max/1.jpg",
+        img: "../imagenes/2 Avanzados/Kit Aegis Max/1.jpg",
         description: "Un todo terreno con un tanque poderoso",
         alt: "Equipo avanzado, de marca GeekVape, modelo Aegis MAX"
     },
@@ -94,7 +94,7 @@ const productos = [
         precio: 2100,
         stock: 6,
         categoria: "equipos",
-        img: "./imagenes/2 Avanzados/Aegis Boost +/1.jpg",
+        img: "../imagenes/2 Avanzados/Aegis Boost+/1.jpg",
         description: "Sencillamente revolucionario y potente",
         alt: "Equipo avanzado, de marca GeekVape, modelo Aegis Boost Pro"
     },
@@ -105,7 +105,7 @@ const productos = [
         precio: 2800,
         stock: 7,
         categoria: "equipos",
-        img: "./imagenes/2 Avanzados/Vaporesso Gen S/1.jpg",
+        img: "../imagenes/2 Avanzados/Vaporesso Gen S/1.jpg",
         description: "El mejor chip del mercado y la mejor estética",
         alt: "Equipo avanzado, de marca Vaporesso, modelo Gen S"
     },
@@ -116,7 +116,7 @@ const productos = [
         precio: 2500,
         stock: 2,
         categoria: "equipos",
-        img: "./imagenes/3 Pro/Equipo pro 1.jpg",
+        img: "../imagenes/3 Pro/Equipo pro 1.jpg",
         description: "Semi mecánico... Poderoso y seguro",
         alt: "Mod para vapeo, de marca Ehpro, modelo Armor"
     },
@@ -127,7 +127,7 @@ const productos = [
         precio: 3000,
         stock: 1,
         categoria: "equipos",
-        img: "./imagenes/3 Pro/Equipo pro 2.jpg",
+        img: "../imagenes/3 Pro/Equipo pro 2.jpg",
         description: "Calidad, estética y potencia, todo en uno",
         alt: "Mod para vapeo, de marca Voopoo, modelo Drag 3"
     },
@@ -138,7 +138,7 @@ const productos = [
         precio: 3000,
         stock: 22,
         categoria: "equipos",
-        img: "./imagenes/3 Pro/Equipo pro 3.jpg",
+        img: "../imagenes/3 Pro/Equipo pro 3.jpg",
         description: "Nuestro único mod de pantalla táctil",
         alt: "Mod para vapeo, de marca Vaporesso, modelo Luxe"
     },
@@ -149,7 +149,7 @@ const productos = [
         precio: 2800,
         stock: 10,
         categoria: "equipos",
-        img: "./imagenes/3 Pro/Equipo pro 4.jpg",
+        img: "../imagenes/3 Pro/Equipo pro 4.jpg",
         description: "Mod potente y portátil",
         alt: "Mod para vapeo, de marca Desire, modelo Cut"
     },
@@ -160,7 +160,7 @@ const productos = [
         precio: 2800,
         stoc: 3,
         categoria: "equipos",
-        img: "./imagenes/3 Pro/Equipo pro 5.jpg",
+        img: "../imagenes/3 Pro/Equipo pro 5.jpg",
         description: "Mod compatible con baterias 21700, 20700 y 18650",
         alt: "Mod para vapeo, de marca Augvape, modelo VX217"
     },
@@ -171,7 +171,7 @@ const productos = [
         precio: 2800,
         stock: 6,
         categoria: "equipos",
-        img: "./imagenes/3 Pro/Equipo pro 6.jpg",
+        img: "../imagenes/3 Pro/Equipo pro 6.jpg",
         description: "Mod de baja potencia pero de una bateria",
         alt: "Mod para vapeo, de marca Hellvape, modelo Arez"
     },
@@ -182,7 +182,7 @@ const productos = [
         precio: 1200,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/King Crest/king crest 1.jpg",
+        img: "../imagenes/Eliquids/King Crest/king crest 1.jpg",
         description: "La versión reserva del popular sabor Don Juan",
         alt: "eliquid de marca King Crest sabor Don Juan"
     },
@@ -193,7 +193,7 @@ const productos = [
         precio: 1200,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/King Crest/alien pop.webp",
+        img: "../imagenes/Eliquids/King Crest/alien pop.webp",
         description: "Chupetín de frutilla que pareciera ser de otro mundo",
         alt: "Eliquid de la marca King Crest, sabor Alien Pop, chupetin de frutilla"
     },
@@ -204,7 +204,7 @@ const productos = [
         precio: 1200,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/King Crest/planet pops blue.jpg",
+        img: "../imagenes/Eliquids/King Crest/planet pops blue.jpg",
         description: "Sabor a caramelo de frutos rojos y arándanos",
         alt: "Eliquid de la marca King Crest, sabor Planet Pop, sabor a frutos rojos y arandanos"
     },
@@ -215,7 +215,7 @@ const productos = [
         precio: 1500,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Ice Monster/ice monster 1.png",
+        img: "../imagenes/Eliquids/Ice Monster/ice monster 1.png",
         description: "Sabrosos frutos rojos congelados",
         alt: "Eliquid de marca Ice Monster con sabor a frutos rojos frescos"
     },
@@ -226,7 +226,7 @@ const productos = [
         precio: 1500,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Ice Monster/ice monster 2.png",
+        img: "../imagenes/Eliquids/Ice Monster/ice monster 2.png",
         description: "Combinación de mandarina y guayaba refrescante",
         alt: "Eliquid de marca Ice Monster con sabor a mandarina y guayava con un golpe fresco"
     },
@@ -237,7 +237,7 @@ const productos = [
         precio: 1500,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Ice Monster/ice monster 3.jpg",
+        img: "../imagenes/Eliquids/Ice Monster/ice monster 3.jpg",
         description: "Sabor a melón, con frutas tropicales y un golpe fresco",
         alt: "Eliquid de marca Ice Monster con sabor a melón"
     },
@@ -248,7 +248,7 @@ const productos = [
         precio: 1500,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Ice Monster/ice monster 4.jpg",
+        img: "../imagenes/Eliquids/Ice Monster/ice monster 4.jpg",
         description: "Sandías y frutillas... Pero en un invierno en tu boca",
         alt: "Eliquid de marca Ice Monster con sabor a sandía y frutilla, con un final fresco"
     },
@@ -259,7 +259,7 @@ const productos = [
         precio: 1500,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Ice Monster/ice monster 5.webp",
+        img: "../imagenes/Eliquids/Ice Monster/ice monster 5.webp",
         description: "Sabor fiel a Banana, con un golpe frío al paladar",
         alt: "Eliquid de marca Ice Monster con sabor a banana y un golpe fresco"
     },
@@ -270,7 +270,7 @@ const productos = [
         precio: 1500,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Ice Monster/ice monster 6.jpg",
+        img: "../imagenes/Eliquids/Ice Monster/ice monster 6.jpg",
         description: "Frutos rojos, frutillas y limón con un final fresco",
         alt: "Eliquid de marca Ice Monster con sabor a frutos rojos, limon y frutillas con un golpe fresco"
     },
@@ -281,7 +281,7 @@ const productos = [
         precio: 1400,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Vapetasia/vapetasia.webp",
+        img: "../imagenes/Eliquids/Vapetasia/vapetasia.webp",
         description: "Sabor vainilla y crema",
         alt: "Eliquid de marca Vapetasia con sabor a vainilla y crema"
     },
@@ -292,7 +292,7 @@ const productos = [
         precio: 1400,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Vapetasia/vapetasia 2.webp",
+        img: "../imagenes/Eliquids/Vapetasia/vapetasia 2.webp",
         description: "Cereal con leche y frutos rojos",
         alt: "Eliquid de marca Vapetasia con sabor a cereal con leche y frutos rojos"
     },
@@ -303,7 +303,7 @@ const productos = [
         precio: 1400,
         stock: 50,
         categoria: "liquidos",
-        img: "./imagenes/Eliquids/Vapetasia/vapetasia 3.png",
+        img: "../imagenes/Eliquids/Vapetasia/vapetasia 3.png",
         description: "Tabaco, crema, vainilla y nueces",
         alt: "Eliquid de marca Vapetasia con sabor a tabaco, crema, vainilla y nueces"
     }
