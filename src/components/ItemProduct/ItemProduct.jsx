@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -12,12 +11,13 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './ItemProduct.css'
 import { Box, Button } from "@mui/material";
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 
 const ItemProduct = ({ info }) => {
     return (
         <div className='card'>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345, }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="">

@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import ItemCount from '../ItemCount/ItemCount';
+import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
 export const ItemDetail =({ data }) => {
+    const [goToCart, setGoToCart] = useState(false)
+    const {addProduct} = useCartContext();
+
+
+    const onAdd = (quantity) =>{
+        setGoToCart(true);
+        addProduct(data, quantity)
+        console.log(`Compraste ${quantity} unidades`);
+    }
+
+
     return(
             <>
-                <Card className="productDescription" sx={{ maxWidth: 345 }}>
+                <Card className="productDescription" sx={{ maxWidth: 550 }}>
                     <CardHeader
-                        avatar={
-                            <Avatar sx={{ bgcolor: red[500] }} aria-label="">
-                                E {/* Acá va un logo de un equipo que tengo que hacer */}
-                            </Avatar>
-                        }
                         title={data.modelo}
                         subheader={data.marca}
                     />
@@ -35,11 +41,14 @@ export const ItemDetail =({ data }) => {
                         </Typography>
                         <div className="price"> ${data.precio}</div>
                         <div className="stock">Available stock = {data.stock}</div>
-                        
                     </CardContent>
                     <CardActions disableSpacing>
                         <IconButton>
-                            <ItemCount />
+                            {
+                                goToCart
+                                ? <Link to='/cart'>Terminar compra</Link>
+                                :<ItemCount stock={data.stock} onAdd={onAdd}/>
+                            }
                         </IconButton>
                     </CardActions>
                 </Card>

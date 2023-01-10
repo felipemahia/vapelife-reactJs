@@ -1,7 +1,9 @@
-.cardListContainer{
-    margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+.cardContainer{
+    justify-content: center;
+}
+
+@media (min-width: 720px) and (max-width: 1080px) {
+    .cardContainer{
+        justify-content: center;
+    }    
 }

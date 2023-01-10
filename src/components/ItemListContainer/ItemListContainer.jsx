@@ -2,33 +2,29 @@ import ItemList from "../ItemList/ItemList";
 import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css'
 import { useParams } from "react-router-dom";
-import productos from "../../utils/mock";
+import { Grid } from "@mui/material";
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 
 export const ItemListContainer = () => {
     const [data, setData] = useState([]);
-    const { categoriaID } = useParams();
-    
-    const getProducts = () => new Promise(resolve => {
-        setTimeout(() => resolve(productos), 3000);
-    });
+    const { categoriaId } = useParams();
 
     useEffect(() => {
-        if (categoriaID) {
-            getProducts()
-                .then(res => setData(res.filter(p => p.categoria === categoriaID)))
-                .catch(error => console.log(error))
-        } else {
-            getProducts()
-                .then(res => setData(res))
-                .catch(error => console.log(error))
-        }
-        return () => setData([])
-    }, [categoriaID]);
-
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, 'productos');
+        if (categoriaId) {
+        const queryFilter = query(queryCollection, where('categoria', '==', categoriaId))
+            getDocs(queryFilter)
+                .then(res => setData(res.docs.map(product => ({id: product.id, ...product.data()}))));
+            } else{
+                getDocs(queryCollection)
+                .then(res => setData(res.docs.map(product => ({id: product.id, ...product.data()}))));
+            }
+    }, [categoriaId])
 
     return (
-        <div className="cardListContainer">
+        <Grid className="cardContainer" container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <ItemList data={data} />
-        </div>
+        </Grid>
     );
 }

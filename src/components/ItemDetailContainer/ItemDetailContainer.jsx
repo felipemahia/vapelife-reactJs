@@ -1,31 +1,37 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect, } from "react";
+import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css'
 import { useParams } from "react-router-dom";
-import productos from "../../utils/mock";
 
 export const ItemDetailContainer = () => {
 
     const [data, setData] = useState({})
     const { detalleId } = useParams();
 
-    const getProductsDetail = () => new Promise(resolve => {
-        setTimeout(() => resolve(productos), 3000);
-    });
-
+    const getItem = async () => {
+        const database = getFirestore();
+        const docRef = doc(database, "productos", detalleId)
+        const docSnap = await getDoc(docRef)
+        const product = { ...docSnap.data(), id: docSnap.id }
+        return product
+    }
     useEffect(() => {
-        const getProductsDetail = new Promise((resolve) => {
-            setTimeout(()=>{
-                resolve (productos);
-            })
-        })
-        getProductsDetail.then(res=>setData(res.find(p => p.id === parseInt(detalleId))))
-    }, [])
+        const ItemAwait = async () => {
+            try {
+                const responseLog = await getItem()
+                setData(responseLog)
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }
+        ItemAwait()
+    }, [detalleId])
 
-    return(
-        
+    return (
         <div className="cardDetailContainer">
-        <ItemDetail data={data}/>
+            <ItemDetail data={data} />
         </div>
     )
 }

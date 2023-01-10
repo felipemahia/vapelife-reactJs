@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <AppBar position="sticky">
-            <Container maxWidth="">
+            <Container className='colorNavBar' maxWidth="">
                 <Toolbar disableGutters>
                     <Logo />
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -37,7 +37,7 @@ const Header = () => {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="inherit"
+                            color="red"
                         >
                             <MenuIcon />
                         </IconButton>

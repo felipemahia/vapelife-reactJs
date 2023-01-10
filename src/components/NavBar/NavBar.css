@@ -3,3 +3,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.colorNavBar{
+    background-color: rgb(145, 15, 15);
+}
