@@ -1,0 +1,20 @@
+.titulo{
+    padding-top: 3rem;
+    font-weight: 900;
+    font-size: xx-large;
+    text-align: center;
+}
+.eliminarFondoBlanco{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+  }
+.centrarBtn{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.titleCartPrice {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 800;
+}

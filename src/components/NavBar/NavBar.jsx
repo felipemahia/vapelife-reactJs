@@ -9,12 +9,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import "./NavBar.css"
+import CartWidget from '../CartWidget/CartWidget';
 
-const Header = () => {
+const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -27,9 +27,9 @@ const Header = () => {
 
     return (
         <AppBar position="sticky">
-            <Container className='colorNavBar' maxWidth="">
+            <Container className='colorNavBar' maxWidth=" ">
                 <Toolbar disableGutters>
-                    <Logo />
+                    <Link to='/'><Logo />
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -70,6 +70,7 @@ const Header = () => {
                             </MenuItem>
                         </Menu>
                     </Box>
+                    </Link>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <MenuItem onClick={handleCloseNavMenu}>
@@ -87,7 +88,8 @@ const Header = () => {
 
                         <Tooltip title="Tu carrito">
                             <IconButton sx={{ p: 0 }}>
-                                <ShoppingCart /> 0
+                                
+                                <Link to='/cart'><CartWidget/></Link>
                             </IconButton>
                         </Tooltip>
                     </Box>
@@ -96,4 +98,4 @@ const Header = () => {
         </AppBar>
     );
 }
-export default Header; 
+export default NavBar; 

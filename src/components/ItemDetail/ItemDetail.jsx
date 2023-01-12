@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
+import './ItemDetail.css'
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
+import { Button } from "@mui/material";
 
 export const ItemDetail =({ data }) => {
     const [goToCart, setGoToCart] = useState(false)
@@ -25,10 +26,8 @@ export const ItemDetail =({ data }) => {
     return(
             <>
                 <Card className="productDescription" sx={{ maxWidth: 550 }}>
-                    <CardHeader
-                        title={data.modelo}
-                        subheader={data.marca}
-                    />
+                    <div className="detalleTitulo"> {data.marca}</div>
+                    <div className="detalleSubtitulo">{data.modelo}</div>
                     <CardMedia
                         component="img"
                         height="194"
@@ -36,21 +35,23 @@ export const ItemDetail =({ data }) => {
                         alt={data.alt}
                     />
                     <CardContent>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="h6" align='center' color="black">
                             {data.description}
                         </Typography>
-                        <div className="price"> ${data.precio}</div>
-                        <div className="stock">Available stock = {data.stock}</div>
+                        <Typography variant="h4" align='center' ><div className="price"> ${data.precio}</div></Typography>
+                        <Typography variant="body2" color="text.secondary"><div className="stock">Available stock = {data.stock}</div></Typography>
                     </CardContent>
                     <CardActions disableSpacing>
                         <IconButton>
                             {
                                 goToCart
-                                ? <Link to='/cart'>Terminar compra</Link>
+                                ? <Button variant="contained" color="success"><Link to='/cart'>Terminar compra</Link></Button>
                                 :<ItemCount stock={data.stock} onAdd={onAdd}/>
                             }
+                            
                         </IconButton>
                     </CardActions>
+                    <Button  variant="outlined" color="error"><Link to='/'>Volver al inicio</Link></Button>
                 </Card>
             </>
         );

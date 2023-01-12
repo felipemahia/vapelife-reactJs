@@ -1,9 +1,44 @@
-.card {
+/* .card {
     padding: 20px;
-    height: auto;
+    height: 500px;
     width: 300px;
     margin: 25px;
    display: flex;
    flex-direction: column;
    align-items: center;
+} */
+.title {
+    font-weight: 800;
+}
+
+.secondTitle {
+    font-weight: 600;
+}
+
+.description {
+    text-align: center;
+}
+
+.item-product {
+    background-color: rgb(240, 240, 240);
+    height: auto;
+    width: 300px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: rgb(228, 228, 228) 3px solid;
+    margin-bottom: 8px;
+}
+
+.productImage {
+    height: auto;
+    width: 300px;
+    padding: 25px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+.price {
+    padding: 25px;
 }

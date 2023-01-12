@@ -4,3 +4,17 @@
         align-items: center;
         padding: 50px;
 }
+.price{
+        text-align: center;
+}
+.detalleTitulo{
+        display: flex;
+        text-align: left;
+        font-size: 38px;
+        font-weight: 800;
+}
+.detalleSubtitulo{
+        text-align: right;
+        font-size: 28px;
+        font-weight: 600;
+}

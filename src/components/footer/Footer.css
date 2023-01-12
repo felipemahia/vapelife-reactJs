@@ -1,4 +1,35 @@
 .Footer1{
+    margin-top: 40px;
+    padding-bottom: 20px;
+    
+    color: white;
+background: linear-gradient(0deg, rgba(145,15,15,1) 10%, rgba(255,255,255,0) 100%);
+    
+}
+.textFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
     text-align: center;
-    padding-bottom: 200px;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+}
+.centerAll{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.derechos{
+    display: flex;
+    margin-right: 8px;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-style: italic;
+}
+.margenIg{
+    margin-left: 8px;
+    margin-right: 8px;
 }

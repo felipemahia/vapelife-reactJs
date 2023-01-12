@@ -2,9 +2,100 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
+import './Cart.css'
+import ItemCart from '../ItemCart/ItemCart'
+
+const Cart = () => {
+    const { cart, totalPrice } = useCartContext();
+
+    if (cart.length === 0) {
+        return (
+            <>
+                <div>
+                    <h1 className="titulo">No hay elementos en tu carrito :(</h1>
+                    <div className="centrarBtn">
+                        <Button className="boton" size="big" variant="outlined" color="primary"><Link to='/'>Hacé click acá para realizar tu compra ;)</Link></Button>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+    return (
+        <>
+            <div className="eliminarFondoBlanco">
+                {
+                    cart.map(product => <ItemCart key={product.id} product={product} />)
+                }
+                <h1 className="titleCartPrice">
+                    Total: {totalPrice()}
+                </h1>
+            </div>
+
+            {/* Intento de modal */}
+            {/* {showModal &&
+                <Modal title={"DATOS DE CONTACTO"} close={handleModal}>
+                    {buySucces ? (
+                        <>
+                            <h2>Su orden se genero correctamente</h2>
+                            <h3>El numero de su orden es {buySucces} </h3>
+                        </>
+
+                    ) : (
+
+                        <form onSubmit={sendData}>
+                            <input
+                                type="text"
+                                name='name'
+                                onChange={handleChange}
+                                placeholder="Name"
+                                value={formData.name}
+                            />
+
+                            <input
+                                type="number"
+                                onChange={handleChange}
+                                name='phone'
+                                placeholder="Phone"
+                                value={formData.phone}
+                            />
+
+                            <input
+                                type="email"
+                                onChange={handleChange}
+                                name='email'
+                                placeholder="Your e-mail adress"
+                                value={formData.email}
+                            />
+                            <Button type="sumbit">Send</Button>
+                        </form>
+                    )}
+                </Modal>
+            } */}
+        </>
+
+    )
+}
 
 
-const Cart = (condition) => {
+
+
+
+export default Cart;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const Cart = (condition) => {
     const { cart, totalPrice, removeProduct, clearCart } = { useCartContext }
 
     condition = cart.length === 0
@@ -45,33 +136,7 @@ const Cart = (condition) => {
 }
 
 
-export default Cart; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Cart;  */
 
 
 /*     const order = {
@@ -86,18 +151,7 @@ export default Cart;
         .then (({id}) => console.log(id));
     }
 
-    if(cart.length === 0) {
-        return(
-            <>
-            <div>
-                <h1>
-                    No hay elementos en tu carrito :(
-                        <Link to='/'> Hacé tu compra ;)</Link>
-            </h1>
-                </div>
-            </>
-        )
-    }
+    
 
 
     return(

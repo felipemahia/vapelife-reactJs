@@ -1,58 +1,23 @@
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './ItemProduct.css'
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { Link } from 'react-router-dom';
 import React from 'react';
 
 
 const ItemProduct = ({ info }) => {
+
+    const { modelo, marca, img, alt, id, precio } = info
     return (
-        <div className='card'>
-            <Card sx={{ maxWidth: 345, }}>
-                <CardHeader
-                    avatar={
-                        <Avatar sx={{ bgcolor: red[500] }} aria-label="">
-                            E {/* Acá va un logo de un equipo que tengo que hacer */}
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                        </IconButton>
-                    }
-                    title={info.modelo}
-                    subheader={info.marca}
-                />
-                <CardMedia
-                    component="img"
-                    height="194"
-                    image={info.img}
-                    alt={info.alt}
-                />
-                <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                        {info.description}
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <Box>
-                    <Button size= "small" variant="contained" color="secondary">
-                        <Link style = {{textDecoration: "none", color: 'white'}} to={`/detalle/${info.id}`} >Ver más</Link>
-                        </Button>
-                    </Box>
-                </CardActions>
-            </Card>
+        <div className='item-product'>
+            <img className='productImage' src={img} alt={alt} />
+            <h1 className='title'>{marca}</h1>
+            <h2 className='secondTitle'>{modelo}</h2>
+            <span className='price'>${precio}</span>
+            <Button size="small" variant="contained" color="secondary">
+                <Link style={{ textDecoration: "none", color: 'white' }} to={`/detalle/${id}`} >Ver más</Link>
+            </Button>
         </div>
-    );
+    )
 }
 
 export default ItemProduct;
