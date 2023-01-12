@@ -23,6 +23,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.swal2-popup{
+  z-index: 100;
+}
 
 .App-link {
   color: #61dafb;

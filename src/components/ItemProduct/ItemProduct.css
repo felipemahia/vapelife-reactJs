@@ -20,6 +20,7 @@
 }
 
 .item-product {
+    padding-bottom: 12px;
     background-color: rgb(240, 240, 240);
     height: auto;
     width: 300px;
@@ -32,8 +33,6 @@
 }
 
 .productImage {
-    height: auto;
-    width: 300px;
     padding: 25px;
     filter: brightness(1.1);
     mix-blend-mode: multiply;
