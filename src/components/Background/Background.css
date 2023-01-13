@@ -1,0 +1,26 @@
+.backgroundContainer{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+.backgroundImg{
+    width: 100%;
+    display: block;
+
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+.backgroundTitle{
+    top: 35%;
+    text-align: center;
+    position: absolute;
+    font-size: 68px;
+    font-weight: 800;
+    color: white;
+    background-color: brown;
+    box-shadow: 10px 5px 5px black;
+}

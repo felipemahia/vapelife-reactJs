@@ -26,7 +26,7 @@ const NavBar = () => {
     };
 
     return (
-        <AppBar position="sticky">
+        <AppBar className='appBar' position="sticky">
             <Container className='colorNavBar' maxWidth=" ">
                 <Toolbar disableGutters>
                     <Link to='/'><Logo />
